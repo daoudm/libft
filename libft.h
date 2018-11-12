@@ -6,17 +6,13 @@
 /*   By: marwa <marwa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 11:58:29 by mdaoud            #+#    #+#             */
-/*   Updated: 2018/11/12 17:43:06 by marwa            ###   ########.fr       */
+/*   Updated: 2018/11/12 21:14:14 by marwa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <unistd.h>
-// DELETE AFETER
-#include <stdio.h>
 #include <stdlib.h>
-#include <fcntl.h>
-// DELETE BEFORE
 
 typedef struct	s_list
 {

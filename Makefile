@@ -3,38 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mdaoud <mdaoud@student.42.fr>              +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/11/11 19:03:57 by mdaoud            #+#    #+#              #
-#    Updated: 2018/11/11 19:12:32 by mdaoud           ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
-# TARGET	=	libft.a
-# CC		= 	gcc
-# CFlAGS	=	-Wall -Werror -Wextra
-
-# all: $(TARGET)
-
-# $(TARGET):
-# 	$(CC) $(CFlAGS) -c ft_display_file.c
-# 	$(CC) $(CFlAGS) -o ft_display_file ft_display_file.o
-
-# clean:
-# 	rm -f ft_display_file.o
-
-# fclean: clean
-# 	rm -rf ft_display_file
-
-	# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: mdaoud <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: marwa <marwa@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/21 22:50:51 by mdaoud            #+#    #+#              #
-#    Updated: 2018/08/22 19:02:41 by mdaoud           ###   ########.fr        #
+#    Updated: 2018/11/12 20:23:22 by marwa            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,14 +15,17 @@ CC		= 	gcc
 CFlAGS	= 	-Wall -Werror -Wextra
 HEADERS	=	libft.h
 SRC 	=	$(wildcard *.c)
-OBJ		=	$(wildcard *.o)
+OBJ		=	$(SRC:.c=.o)
 
 all: $(TARGET)
 
 $(TARGET): $(SRC)
-	$(CC) $(CFlAGS) -c $(SRC) -i$(HEADERS)
+	$(CC) $(CFlAGS) -c $(SRC) -l$(HEADERS)
 	ar rc $(TARGET) $(OBJ)
-	ranlib $(TARGET)
+	ranlib $(TARGET) 
+
+%.o: %c
+	$(CC) $(CFlAGS) -c $@ $<
 
 clean:
 	rm -f *.o
