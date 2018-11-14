@@ -6,13 +6,13 @@
 /*   By: mdaoud <mdaoud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 15:21:24 by mdaoud            #+#    #+#             */
-/*   Updated: 2018/11/11 17:05:01 by mdaoud           ###   ########.fr       */
+/*   Updated: 2018/11/14 12:47:09 by mdaoud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*convert(int n, int len, int neg)
+static char		*convert(int n, int len, int neg)
 {
 	char	*retval;
 	int		i;
@@ -37,7 +37,7 @@ char		*convert(int n, int len, int neg)
 	return (retval);
 }
 
-char		*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	int		neg;
 	int		temp;

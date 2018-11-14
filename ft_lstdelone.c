@@ -1,13 +1,18 @@
-/*
-* @Author: daoudm
-* @Date:   2018-11-12 13:54:47
-* @Last Modified by:   daoudm
-* @Last Modified time: 2018-11-12 16:25:59
-*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdaoud <mdaoud@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/14 12:31:24 by mdaoud            #+#    #+#             */
+/*   Updated: 2018/11/14 12:36:27 by mdaoud           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-void 		ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
+void		ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
 	(del)((*alst)->content, (*alst)->content_size);
 	free(*alst);

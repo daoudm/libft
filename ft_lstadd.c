@@ -1,9 +1,14 @@
-/*
-* @Author: daoudm
-* @Date:   2018-11-12 13:23:05
-* @Last Modified by:   daoudm
-* @Last Modified time: 2018-11-12 13:48:43
-*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdaoud <mdaoud@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/14 12:31:24 by mdaoud            #+#    #+#             */
+/*   Updated: 2018/11/14 12:35:11 by mdaoud           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -11,6 +16,5 @@ void		ft_lstadd(t_list **alst, t_list *new)
 {
 	if (*alst)
 		new->next = *alst;
-//	printf("alst NULL\n");
 	*alst = new;
 }
