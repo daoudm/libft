@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdaoud <mdaoud@student.42.fr>              +#+  +:+       +#+        */
+/*   By: marwa <marwa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 11:58:29 by mdaoud            #+#    #+#             */
-/*   Updated: 2018/11/14 12:44:48 by mdaoud           ###   ########.fr       */
+/*   Updated: 2018/11/15 17:44:14 by marwa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+/*
+Delete
+*/
+# include <stdio.h>
 
 typedef struct	s_list
 {
@@ -85,5 +89,15 @@ void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+/*
+** 	Extra Functions
+*/
+
+void			ft_lstprintone(t_list *lst);
+void			ft_lst_add_tail(t_list **alst, t_list *new);
+t_list			**ft_lstsplit(char const *s, char c);
+char			*ft_strrev(char *str);
+int				ft_isspace(char c);
 
 #endif
