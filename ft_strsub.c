@@ -6,7 +6,7 @@
 /*   By: mdaoud <mdaoud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 11:58:21 by mdaoud            #+#    #+#             */
-/*   Updated: 2018/11/11 13:09:14 by mdaoud           ###   ########.fr       */
+/*   Updated: 2018/11/16 12:10:56 by mdaoud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char		*ft_strsub(char const *s, unsigned int start, size_t len)
 	char	*retval;
 	size_t	i;
 
+	if (s == NULL)
+		return (NULL);
 	if (start > ft_strlen(s))
 		return (NULL);
 	if (!(retval = malloc((len + 1) * sizeof(char))))

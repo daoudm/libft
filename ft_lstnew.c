@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marwa <marwa@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mdaoud <mdaoud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 12:31:24 by mdaoud            #+#    #+#             */
-/*   Updated: 2018/11/15 16:25:22 by marwa            ###   ########.fr       */
+/*   Updated: 2018/11/16 12:59:24 by mdaoud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_list		*ft_lstnew(void const *content, size_t content_size)
 	if (content == NULL)
 	{
 		new_list->content = NULL;
-		content_size = 0;
+		new_list->content_size = 0;
 	}
 	else
 	{

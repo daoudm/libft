@@ -6,7 +6,7 @@
 /*   By: mdaoud <mdaoud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 14:30:32 by mdaoud            #+#    #+#             */
-/*   Updated: 2018/11/11 15:17:13 by mdaoud           ###   ########.fr       */
+/*   Updated: 2018/11/16 12:54:53 by mdaoud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,22 +39,21 @@ char		**ft_strsplit(char const *s, char c)
 	int		i;
 	int		j;
 
+	if (s == NULL)
+		return (NULL);
 	word_count = ft_word_count(s, c);
 	if (!(retval = malloc((word_count + 1) * sizeof(char *))))
 		return (NULL);
 	word = 0;
 	i = 0;
-	while (s[i])
+	while (s[i] && word < word_count)
 	{
 		while (s[i] && s[i] == c)
 			i++;
-		if (!s[i])
-			break ;
 		j = i;
-		while (s[j] && s[j] != c)
-			j++;
-		retval[word++] = ft_strsub(s, i, j - i);
-		i = j;
+		while (s[i] && s[i] != c)
+			i++;
+		retval[word++] = ft_strsub(s, j, i - j);
 	}
 	retval[word] = NULL;
 	return (retval);

@@ -6,7 +6,7 @@
 /*   By: mdaoud <mdaoud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 19:12:25 by mdaoud            #+#    #+#             */
-/*   Updated: 2018/11/10 19:29:27 by mdaoud           ###   ########.fr       */
+/*   Updated: 2018/11/16 12:10:09 by mdaoud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int			ft_strnequ(char const *s1, char const *s2, size_t n)
 {
 	size_t		i;
 
+	if (s1 == NULL || s2 == NULL)
+		return (0);
 	if (n == 0)
 		return (1);
 	i = 0;

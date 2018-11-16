@@ -6,7 +6,7 @@
 /*   By: mdaoud <mdaoud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 17:57:46 by mdaoud            #+#    #+#             */
-/*   Updated: 2018/11/10 19:00:51 by mdaoud           ###   ########.fr       */
+/*   Updated: 2018/11/16 12:09:35 by mdaoud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char		*ft_strmap(char const *s, char (*f)(char))
 	char	*retval;
 	int		it;
 
+	if (s == NULL)
+		return (NULL);
 	len = ft_strlen(s);
 	it = 0;
 	if ((retval = malloc((len + 1) * sizeof(char))) == NULL)
